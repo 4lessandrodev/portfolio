@@ -1,0 +1,22 @@
+:root{
+	--dark-color-one: #512DA7; 
+	--dark-color-two: #673BB7; 
+	--dark-color-three: #9963FC; 
+	--dark-color-four: #DOC4E8; 
+	--white-color: #FFFFFF;
+	--accent-color: #536DFE; 
+	--black-color: #212121; 
+	--grey-color: #757575; 
+	--dark-divider-color: #BDBDBD; 
+	--light-divider-color: #DEDEDE; 
+  --family-default: 'Raleway'
+}
+
+body {
+  font: 14px var(--family-default),
+  sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
