@@ -78,6 +78,59 @@ body {
 	font-style: normal;
 }
 
+#about{
+	padding-top: 5%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+#about .avatar{
+	color: var(--dark-color-one);
+	font-size: 63px;
+}
+
+#about .name{
+	font-size: large;
+	color: var(--dark-color-one);
+	margin: 2px 0 4px 0;
+}
+
+#about .graduacao {
+	font-size: small;
+	color: var(--dark-color-one);
+	margin: 2px 0 4px 0;
+}
+
+#about .about-btn {
+	font-size: small;
+	color: var(--dark-color-one);
+	margin: 2px 0 4px 0;
+	min-width: 70%;
+	width: 70%;
+	max-width: 70%;
+}
+
+#about .about-btn a{
+	font-size: 28px;
+	padding: 0 7%;
+}
+
+.about-btn .btn button{
+	margin: 5% 0;
+	padding: 5% 5%;
+	background-color: var(--dark-color-one);
+	color: var(--white-color);
+	min-width: 82%;
+	border-radius: 30px;
+}
+
+.about-btn .btn{
+border-bottom: 1px solid var(--dark-divider-color);
+padding: 0 0 5% 0;
+margin-bottom: 5%;
+}
+
 img{
 	max-width: 50%;
 }
