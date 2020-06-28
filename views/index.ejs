@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,11 +12,202 @@
   <link rel="shortcut icon" href="/img/default-site/icon-dark.png" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700;900&display=swap"
   rel="stylesheet">
+  <script src="https://kit.fontawesome.com/8701d44bdc.js" crossorigin="anonymous"></script>
   <link rel='stylesheet' href='/css/normalize.css' />
   <link rel='stylesheet' href='/css/style.css' />
 </head>
 <body>
-  <h1><%= title %></h1>
-  <p>Welcome to <%= title %></p>
-</body>
+  <header id="header">
+    <div id="header-div">
+      <ul>
+        <li>About</li>
+        <li>Skills</li>
+        <li>Projetos</li>
+        <li>Contato</li>
+        <li>Blog</li>
+      </ul>
+      <img src="/img/default-site/logorocho.png" alt="" id="logo">
+    </div>
+    <div id="header-banner">
+      <div>
+        <h2>Apaixonado por tecnologia e inovação. Codar é meu estilo de vida</h2>
+      </div>
+    </div>
+  </header>
+  <main id="home">
+    <section id="about">
+      
+      <div>
+        <span><i class="far fa-user-circle"></i></span>
+      </div>
+      
+      <div>
+        <h4>Alessandro - Fullstack</h4>
+        <h5>Cursando <abbr title="Análise e Desenvolvimento de Sistemas">A.D.S</abbr><time datetime="2001-05-15 19:00">
+          2020</time>/<time datetime="2022-12-01 19:00"> 2022</time></h5>
+          
+          <h5>Bacharel <abbr title="Administração de Empresas">A.D.M</abbr><time datetime="2012-01-01 00:00"> 2012
+          </time>/<time datetime="2016-12-01 00:00">2016</time></h5>
+      </div>
+        
+      <div>
+        <button>Contrate-me</button>
+        <span><i class="fas fa-envelope"></i></span>
+        <span><i class="fab fa-github"></i></span>
+        <span><i class="fab fa-linkedin"></i></span>
+      </div>
+        
+    </section>
+      
+    <section id="skills">
+      
+      <h2>Skills</h2>
+      
+      <div>
+        <h4 lang="Eng">NodeJs</h4>
+        <div>
+          <div>
+            >>>>>>>>>>>>>>>>>
+          </div>
+        </div>
+      </div>
+      
+      <div>
+        <h4 lang="Eng">Javascript</h4>
+        <div>
+          <div>
+            >>>>>>>>>>>>>>>>>
+          </div>
+        </div>
+      </div>
+      
+      <div>
+        <h4 lang="Eng">MySQL</h4>
+        <div>
+          <div>
+            >>>>>>>>>>>>>>>>>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    
+    <section id="projetos">
+
+      <article>
+        <div>
+          <img src="/img/default-site/my_apps.png" alt="">
+        </div>
+        <div>
+          <h2>Projetos</h2>
+          <h3>Desafios</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, quos! Vitae qui libero ea enim temporibus 
+            voluptas labore, ducimus, molestiae doloribus provident ab doloremque corporis fugit odio. Voluptatibus, 
+            dignissimos? Necessitatibus.
+          </p>
+        </div>
+      </article>
+
+      <article>
+        
+        <div class="card">
+          <div class="card-header">
+            <h4>Rede social - <abbr lang="Eng" title="No Dependence">NODP</abbr></h4>
+          </div>
+          <div class="card-body">
+            <p>Mussum Ipsum, cacilds vidis litro abertis. Mauris nec dolor in eros commodo tempor.</p>
+          </div>
+          <div class="card-footer">
+            <div>
+              <span><i class="fas fa-heart"></i></span>
+            </div>
+            <div>
+              <a href="#">Detalhes</a>
+            </div>
+          </div>
+        </div>
+        
+      </article>
+
+      <article>
+        <div class="slides">
+          <ul>
+            
+            <li>
+              <div class="slide-img">
+                <img src="/img/upload/nodp_1.jpg" alt="imagem">
+              </div>
+            </li>
+
+            <li>
+              <div class="slide-img">
+                <img src="/img/upload/nodp_2.jpg" alt="imagem">
+              </div>
+            </li>
+
+            <li>
+              <div class="slide-img">
+                <img src="/img/upload/nodp_3.jpg" alt="imagem">
+              </div>
+            </li>
+          
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><span><i class="far fa-circle"></i></span></li>
+            <li><span><i class="fas fa-circle"></i></span></li>
+            <li><span><i class="far fa-circle"></i></span></li>
+            <li><span><i class="far fa-circle"></i></span></li>
+          </ul>
+        </div>
+      </article>
+      
+    </section>
+      
+    <section id="contato">
+    <div>
+      <h2>Contato</h2>
+      <h4>Mande uma mensagem aí...</h4>
+      <p>Mussum Ipsum, cacilds vidis litro abertis. Mauris nec dolor in eros commodo tempor.</p>
+    </div>
+    <div>
+      <form action="#">
+        
+        <div>
+          <label for="name">Nome</label>
+          <input type="text" name="name" id="name" required placeholder="Nome">
+        </div>
+        
+        <div>
+          <label for="subject">Assunto</label>
+          <input type="text" name="subject" id="subject" required placeholder="Assunto">
+        </div>
+        
+        <div>
+          <label for="email">E-mail</label>
+          <input type="text" name="email" id="email" required placeholder="Email">
+        </div>
+
+        <div>
+          <textarea name="message" id="message" cols="30" rows="5" required placeholder="Mensagem"></textarea>
+        </div>
+        <input type="submit" value="Enviar">
+      </form>
+    </div>
+    </section>
+
+  </main>
+  <footer id="footer">
+    <div>
+        <span><i class="fas fa-envelope"></i></span>
+        <span><i class="fab fa-github"></i></span>
+        <span><i class="fab fa-linkedin"></i></span>
+    </div>
+    <div>
+      <address> Created by Alessandro - All Right Reserved <span><i class="fas fa-registered"></i></span></address>
+    </div>
+  </footer>
+  </body>
 </html>
+  
