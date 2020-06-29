@@ -339,6 +339,17 @@ p{
 	border: none;
 }
 
+/* Footer */
+#footer{
+	background-color: var(--dark-color-one);
+	color: var(--white-color);
+	padding: 14%;
+}
+
+#footer .icon{
+	font-size: 34px;
+	padding: 0 5%;
+}
 
 img{
 	max-width: 100%;
