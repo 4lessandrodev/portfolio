@@ -263,6 +263,8 @@ p{
 
 /* Sessão de slides */
 .slides ul{
+	display: flex;
+	overflow: hidden;
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -272,6 +274,14 @@ p{
 	list-style: none;
 	margin: 0;
 	padding: 7%;
+}
+
+.slides ul .active{
+	width: 100%;
+}
+
+.slides ul .hidden{
+	display: none;
 }
 
 .imagens .seletores ul{
@@ -343,12 +353,18 @@ p{
 #footer{
 	background-color: var(--dark-color-one);
 	color: var(--white-color);
-	padding: 14%;
+	padding: 7%;
+	text-align: center;
 }
 
 #footer .icon{
 	font-size: 34px;
 	padding: 0 5%;
+}
+
+#footer a{
+	text-decoration: none;
+	color: var(--white-color);
 }
 
 img{
