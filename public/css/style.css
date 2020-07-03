@@ -83,6 +83,14 @@ p{
 	font-style: normal;
 }
 
+#text_banner{
+	visibility: hidden;
+}
+
+#avatar_about{
+	visibility: hidden;
+}
+
 /* Sessão sobre  */
 
 #about{
@@ -95,6 +103,10 @@ p{
 #about .avatar{
 	color: var(--dark-color-one);
 	font-size: 63px;
+}
+
+#information_about{
+	visibility: hidden;
 }
 
 #about .name{
@@ -116,11 +128,17 @@ p{
 	min-width: 70%;
 	width: 70%;
 	max-width: 70%;
+	overflow: hidden;
+}
+
+#btn_hire{
+visibility: hidden;
 }
 
 #about .about-btn a{
 	font-size: 28px;
 	padding: 0 10%;
+	visibility: hidden;
 }
 
 .about-btn .btn button{
