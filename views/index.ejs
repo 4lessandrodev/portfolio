@@ -15,12 +15,25 @@
   <script src="https://kit.fontawesome.com/8701d44bdc.js" crossorigin="anonymous"></script>
   <script src="/js/gsap.min.js"></script>
   <script src="/js/CustomEase.min.js"></script>
+  <script src="/js/ScrollTrigger.min.js"></script>
+  <script src="/js/TextPlugin.min.js"></script>
   <link rel='stylesheet' href='/css/normalize.css' />
   <link rel='stylesheet' href='/css/style.css' />
 </head>
 <body>
   <header id="header">
-    <nav id="nav">
+    <div id="nav">
+      <div id="div-logo">
+        <img src="/img/default-site/logowhite.png" alt="" id="logo">
+      </div>
+      <div id="hamburguer-menu">
+        <span><i class="fas fa-grip-vertical"></i></span>
+      </div>
+    </div>
+    <nav id="navbar-mobile">
+      <div id="close-mobile-menu">
+       <i class="fas fa-times"></i>
+      </div>
       <ul class="nav-ul" id="nav-ul">
         <li>About</li>
         <li>Skills</li>
@@ -28,12 +41,6 @@
         <li>Contato</li>
         <li>Blog</li>
       </ul>
-      <div id="div-logo">
-        <img src="/img/default-site/logowhite.png" alt="" id="logo">
-      </div>
-      <div id="hamburguer-menu">
-        <span><i class="fas fa-grip-vertical"></i></span>
-      </div>
     </nav>
     <div id="header-banner">
       <h2 id="text_banner">
@@ -79,21 +86,21 @@
         <div>
           <h4 lang="Eng">NodeJs</h4>
           <div class="border-skill">
-            <div class="level-skill"></div>
+            <div class="level-skill" id="nodejs"></div>
           </div>
         </div>
         
         <div>
           <h4 lang="Eng">Javascript</h4>
           <div class="border-skill">
-            <div class="level-skill"></div>
+            <div class="level-skill" id="javascript"></div>
           </div>
         </div>
         
         <div>
           <h4 lang="Eng">MySQL</h4>
           <div class="border-skill">
-            <div class="level-skill"></div>
+            <div class="level-skill" id="mysql"></div>
           </div>
         </div>
         
@@ -120,20 +127,54 @@
           </div>
         </article>
         
-        <article class="cards">
-          <div class="icon-left next">
+        <article class="cards" id="session-cards">
+          <div class="icon-left next" id="btn-prev">
             <span><i class="fas fa-chevron-left"></i></span>
           </div>
           
-          <div class="card">
+          <div class="card active" draggable="true" data-index="0">
             <div class="card-header">
               <h4>Rede social - <abbr lang="Eng" title="No Dependence">NODP</abbr></h4>
+            </div>
+            <div class="card-body">
+              <p>Mussum Ipsum, cacilds vidis litro muis. Mauris nec dolor in eros commodo tempor.</p>
+            </div>
+            <div class="card-footer">
+              <div class="btn-like">
+                <span><i class="fas fa-heart"></i> 22</span>
+              </div>
+              <div>
+                <a href="#">Detalhes</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card hidden" draggable="true" data-index="1">
+            <div class="card-header">
+              <h4>Zera Dengue</h4>
+            </div>
+            <div class="card-body">
+              <p>Mussum Ipsum, cacilds vidis litro abertis. Mauris nec dolor in eros legalis tempor.</p>
+            </div>
+            <div class="card-footer">
+              <div class="btn-like">
+                <span><i class="fas fa-heart"></i> 14</span>
+              </div>
+              <div>
+                <a href="#">Detalhes</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card hidden" draggable="true" data-index="2">
+            <div class="card-header">
+              <h4>Fazenda Utopia</h4>
             </div>
             <div class="card-body">
               <p>Mussum Ipsum, cacilds vidis litro abertis. Mauris nec dolor in eros commodo tempor.</p>
             </div>
             <div class="card-footer">
-              <div>
+              <div class="btn-like">
                 <span><i class="fas fa-heart"></i> 28</span>
               </div>
               <div>
@@ -142,94 +183,92 @@
             </div>
           </div>
           
-          <div class="icon-right next">
+          <div class="icon-right next" id="btn-next">
             <span><i class="fas fa-chevron-right"></i></span>
           </div>
-        </div>
+          
+        </article>
         
-      </article>
+        <article class="imagens">
+          <div class="slides">
+            <ul id="ul-slides">
+              
+              <li>
+                <div class="slide-img active">
+                  <img src="/img/upload/nodp_mob_2.png" alt="imagem">
+                </div>
+              </li>
+              
+              <li>
+                <div class="slide-img hidden">
+                  <img src="/img/upload/nodp_mob_3.png" alt="imagem">
+                </div>
+              </li>
+              
+              <li>
+                <div class="slide-img hidden">
+                  <img src="/img/upload/nodp_mob_1.png" alt="imagem">
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+          <div class="seletores">
+            <ul id="slides-indicadores">
+              <li data-index="1"><span><i class="fas fa-circle"></i></span></li>
+              <li data-index="0"><span><i class="far fa-circle"></i></span></li>
+              <li data-index="2"><span><i class="far fa-circle"></i></span></li>
+            </ul>
+          </div>
+        </article>
+        
+      </section>
       
-      <article class="imagens">
-        <div class="slides">
-          <ul>
-            
-            <li>
-              <div class="slide-img hidden">
-                <img src="/img/upload/nodp_mob_2.png" alt="imagem">
-              </div>
-            </li>
-            
-            <li>
-              <div class="slide-img active">
-                <img src="/img/upload/nodp_mob_3.png" alt="imagem">
-              </div>
-            </li>
-            
-            <li>
-              <div class="slide-img hidden">
-                <img src="/img/upload/nodp_mob_1.png" alt="imagem">
-              </div>
-            </li>
-            
-          </ul>
+      <section id="contato">
+        <div>
+          <h2>Contato</h2>
+          <h4>Mande uma mensagem aí...</h4>
+          <p>Mussum Ipsum, cacilds vidis litro abertis. Mauris nec dolor in eros commodo tempor.</p>
         </div>
-        <div class="seletores">
-          <ul>
-            <li><span><i class="far fa-circle"></i></span></li>
-            <li><span><i class="fas fa-circle"></i></span></li>
-            <li><span><i class="far fa-circle"></i></span></li>
-            <li><span><i class="far fa-circle"></i></span></li>
-          </ul>
+        <div>
+          <form action="#">
+            
+            <div class="input-group">
+              <label for="name">Nome</label>
+              <input type="text" name="name" id="name" required placeholder="Nome">
+            </div>
+            
+            <div class="input-group">
+              <label for="subject">Assunto</label>
+              <input type="text" name="subject" id="subject" required placeholder="Assunto">
+            </div>
+            
+            <div class="input-group">
+              <label for="email">E-mail</label>
+              <input type="text" name="email" id="email" required placeholder="Email">
+            </div>
+            
+            <div class="input-group">
+              <textarea name="message" id="message" cols="30" rows="5" required placeholder="Mensagem"></textarea>
+            </div>
+            <input type="submit" value="Enviar">
+          </form>
         </div>
-      </article>
+      </section>
       
-    </section>
+    </main>
+    <footer id="footer">
+      <div>
+        <a href="mailto:alessandroadm@live.com"><span class="icon"><i class="fas fa-envelope"></i></span></a>
+        <a href="https://github.com/ALESSANDROLMENEZES"><span class="icon"><i class="fab fa-github"></i></span></a>
+        <a href="https://www.linkedin.com/in/alessandro-l-menezes-57906b71/"><span class="icon"><i
+          class="fab fa-linkedin"></i></span></a>
+        </div>
+        <div>
+          <address> Created by Alessandro <span><i class="fas fa-registered"></i></span></address>
+        </div>
+      </footer>
+      <script src="/js/index.js"></script>
+    </body>
+    </html>
     
-    <section id="contato">
-      <div>
-        <h2>Contato</h2>
-        <h4>Mande uma mensagem aí...</h4>
-        <p>Mussum Ipsum, cacilds vidis litro abertis. Mauris nec dolor in eros commodo tempor.</p>
-      </div>
-      <div>
-        <form action="#">
-          
-          <div class="input-group">
-            <label for="name">Nome</label>
-            <input type="text" name="name" id="name" required placeholder="Nome">
-          </div>
-          
-          <div class="input-group">
-            <label for="subject">Assunto</label>
-            <input type="text" name="subject" id="subject" required placeholder="Assunto">
-          </div>
-          
-          <div class="input-group">
-            <label for="email">E-mail</label>
-            <input type="text" name="email" id="email" required placeholder="Email">
-          </div>
-          
-          <div class="input-group">
-            <textarea name="message" id="message" cols="30" rows="5" required placeholder="Mensagem"></textarea>
-          </div>
-          <input type="submit" value="Enviar">
-        </form>
-      </div>
-    </section>
-    
-  </main>
-  <footer id="footer">
-    <div>
-      <a href="mailto:alessandroadm@live.com"><span class="icon"><i class="fas fa-envelope"></i></span></a>
-      <a href="https://github.com/ALESSANDROLMENEZES"><span class="icon"><i class="fab fa-github"></i></span></a>
-      <a href="https://www.linkedin.com/in/alessandro-l-menezes-57906b71/"><span class="icon"><i
-        class="fab fa-linkedin"></i></span></a>
-      </div>
-      <div>
-        <address> Created by Alessandro <span><i class="fas fa-registered"></i></span></address>
-      </div>
-    </footer>
-    <script src="/js/index.js"></script>
-  </body>
-  </html>
-  
