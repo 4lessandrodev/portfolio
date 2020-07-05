@@ -1,10 +1,11 @@
 const TEXTO_BANNER = document.getElementById('text_banner');
 const BTN_HIRE = document.getElementById('btn_hire');
 const AVATAR_ABOUT = document.getElementById('avatar_about');
+const AVATAR_IMG = document.querySelector('#avatar_about img');
 const INFORMATIONS_ABOUT = document.getElementById('information_about');
 const LINKS = document.querySelectorAll('.about-btn a');
-const LEVEL_SKILLS = document.querySelectorAll('#javascript, #mysql, #nodejs');
-const NIVEIS = ['75%', '70%', '80%'];
+const LEVEL_SKILLS = document.querySelectorAll('#javascript, #mysql, #nodejs, #testes, #restapi, #scrum, #git, #html, #css, #mongo, #sequelize, #bootstrap, #react');
+const NIVEIS = ['75%', '70%', '80%', '30%', '50%', '60%', '70%', '80%', '60%', '40%', '60%', '70%', '15%'];
 const DIV_SKILLS = document.getElementById('skills');
 const CARDS_TITLES = document.querySelectorAll('.card-header h4');
 const BTN_NEXT_CARD = document.getElementById('btn-next');
@@ -48,9 +49,19 @@ CustomEase.create("efeitoSlide", "M0,0 C0,0 -0.012,0.461 0.286,0.472 0.549,0.48 
   
   function animateSkills(){
     timeline.set(LEVEL_SKILLS,{autoAlpha:1});
-    timelineSkills.fromTo(LEVEL_SKILLS[0], {width:0}, {width:NIVEIS[0], duration:1 ,ease: 'linear'})
-    .fromTo(LEVEL_SKILLS[1], {width:0},{width:NIVEIS[1], duration:1 ,ease: 'linear'})
-    .fromTo(LEVEL_SKILLS[2], {width:0},{width:NIVEIS[2], duration:1 ,ease: 'linear'})
+    timelineSkills.fromTo(LEVEL_SKILLS[0], { width: 0 }, { width: NIVEIS[0], duration: 1, ease: 'linear' })
+      .fromTo(LEVEL_SKILLS[1], { width: 0 }, { width: NIVEIS[1], duration: 1, ease: 'linear' })
+      .fromTo(LEVEL_SKILLS[2], { width: 0 }, { width: NIVEIS[2], duration: 1, ease: 'linear' })
+      .fromTo(LEVEL_SKILLS[3], { width: 0 }, { width: NIVEIS[3], duration: 1, ease: 'linear' })
+      .fromTo(LEVEL_SKILLS[4], { width: 0 }, { width: NIVEIS[4], duration: 1, ease: 'linear' })
+      .fromTo(LEVEL_SKILLS[5], { width: 0 }, { width: NIVEIS[5], duration: 1, ease: 'linear' })
+      .fromTo(LEVEL_SKILLS[6], { width: 0 }, { width: NIVEIS[6], duration: 1, ease: 'linear' })
+      .fromTo(LEVEL_SKILLS[7], { width: 0 }, { width: NIVEIS[7], duration: 1, ease: 'linear' })
+      .fromTo(LEVEL_SKILLS[8], { width: 0 }, { width: NIVEIS[8], duration: 1, ease: 'linear' })
+      .fromTo(LEVEL_SKILLS[9], { width: 0 }, { width: NIVEIS[9], duration: 1, ease: 'linear' })
+      .fromTo(LEVEL_SKILLS[10], { width: 0 }, { width: NIVEIS[10], duration: 1, ease: 'linear' })
+      .fromTo(LEVEL_SKILLS[11], { width: 0 }, { width: NIVEIS[11], duration: 1, ease: 'linear' })
+      .fromTo(LEVEL_SKILLS[12], { width: 0 }, { width: NIVEIS[12], duration: 1, ease: 'linear' });
   }
   
   function animateTitleCard(card) {
@@ -184,6 +195,12 @@ function fecharNavBarMobile() {
   timelineNavbar.to(NAV_UL, { height: '0vh', duration: 0.5, ease: 'power4.out(1, 0.3)'});
   timelineNavbar.set(NAVBAR_MOBILE, { autoAlpha: 0 },'-=0.4');
 }
+
+function animarAvatarAoPassarMouse() {
+  gsap.to(AVATAR_IMG, { scale: 1.3, duration:1, ease:'back', yoyo:true, repeat:1});
+}
+
+AVATAR_IMG.addEventListener('mouseover', animarAvatarAoPassarMouse);
 
 BTN_CLOSE_NAVBAR.addEventListener('click', fecharNavBarMobile);
 HAMBURGUER_MENU.addEventListener('click',abrirMenuMobile); 

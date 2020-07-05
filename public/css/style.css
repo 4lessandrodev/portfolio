@@ -106,6 +106,10 @@ p{
 	min-height: 40%;
 	max-height: 40%;
 	background-color: var(--dark-color-two);
+	background-image: url('/img/default-site/marca_1.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	height: 15vh;
 	padding: 28% 7%;
 	text-align: center;
@@ -130,6 +134,13 @@ p{
 
 #avatar_about{
 	visibility: hidden;
+}
+
+#avatar_about img{
+	border-radius: 50%;
+	max-width: 70px;
+	border: 3px solid var(--dark-color-one);
+	cursor: pointer;
 }
 
 /* Sessão sobre  */
@@ -170,6 +181,7 @@ p{
 	width: 70%;
 	max-width: 70%;
 	overflow: hidden;
+	border: none;
 }
 
 #btn_hire{
@@ -191,6 +203,7 @@ p{
 	min-width: 82%;
 	border-radius: 30px;
 	font-size: 18px;
+	border: none;
 }
 
 .about-btn .btn{
@@ -343,6 +356,7 @@ p{
 	justify-content: center;
 	align-items: center;
 	padding: 14%;
+	
 }
 
 .slides ul li{
@@ -369,10 +383,20 @@ p{
 }
 
 .imagens .seletores ul li{
-	margin: 0 3%;
+	margin: 0 0.7%;
 	color: var(--dark-color-one);
 }
 
+#ul-slides li .desktop {
+	display: none;
+}
+
+#article-slides{
+	background-image: url('/img/default-site/marca_2.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 
 /* Sessão contato */
 #contato{
@@ -443,7 +467,159 @@ p{
 	color: var(--white-color);
 }
 
+#footer address {
+	margin-top: 3%;
+}
+
 img{
 	max-width: 100%;
+}
+
+
+
+@media only screen and (min-width: 900px) {
+	
+	#nav {
+		border-radius: 0 0 85% 85% / 30%;
+		height: 15%;
+		flex-direction: row-reverse;
+	}
+	
+	#hamburguer-menu {
+		visibility: hidden;
+	}
+	
+	#div-logo{
+		max-width: 11%;
+	}
+	
+	#logo{
+		width: 85%;
+	}
+	
+	#navbar-mobile{
+		visibility: inherit;
+	}
+	
+	#nav-ul{
+		display: flex;
+		max-width: 70vw;
+		width: 70vw;
+		background-color: transparent;
+		flex-direction: row;
+		align-items: center;
+		height: 4%;
+	}
+	#nav-ul li{
+		padding: 0 5%;
+		margin: 0;
+		border: 0;
+		font-size: 1.5rem;
+	}
+	
+	#nav-ul li:hover{
+		cursor: pointer;
+	}
+	
+	#close-mobile-menu{
+		visibility: hidden;
+	}
+	
+	#header-banner {
+		min-height: 14%;
+		max-height: 14%;
+		height: 14%;
+		padding: 18% 7% 7% 7%;
+		text-align: center;
+		overflow: hidden;
+	}
+	
+	#header-banner h2 {
+		font-size: 22px;
+	}
+	
+	#header-banner cite{
+		font-size: 28px;
+	}
+	
+	#about {
+		padding-top: 6%;
+	}
+	
+	.about-btn .btn button{
+		min-width: 42%;
+		width: 42%;
+		font-size: 21px;
+		font-weight: 700;
+		letter-spacing: 2px;
+		
+	}
+	
+	#about .name{
+		font-size: 45px;
+	}
+	
+	#about .graduacao{
+		font-size: 28px;
+	}
+	
+	.cards{
+		width: 100%;
+		max-width: 100%;
+		min-width: 100%;
+	}
+	
+	#projetos .introduction .image-and-text {
+		display: flex;
+		flex-direction: row;
+	}
+	
+	#projetos .introduction h2{
+		margin: 10% 0 0 0;
+	}
+	
+	.slides ul img{
+		max-width: 14%;
+		width: 14%;
+	}
+	
+	.slides ul{
+		padding: 0 10%;
+	}
+	
+	#contato{
+		padding: 10% 30%;
+		background-image: url('/img/default-site/marca_bot.svg');
+		background-position: 90%;
+		background-repeat: no-repeat;
+		background-size: 14%;
+	}
+	
+	#avatar_about img {
+		max-width: 140px;
+		border: 7px solid var(--dark-color-one);
+		cursor: pointer;
+	}
+	
+	#avatar_about img:hover {
+		border: 7px solid var(--dark-color-one);
+		cursor: pointer;
+	}
+	#ul-slides li .desktop{
+		display: block;
+		width: 60%;
+		max-width: 60%;
+		margin: 5%;
+		border: 7px solid var(--dark-color-one);
+		border-radius: 14px;
+	}
+	.slides ul .active {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		
+	}
+	
 }
 
