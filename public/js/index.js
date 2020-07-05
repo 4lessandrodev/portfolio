@@ -1,4 +1,3 @@
-const TEXTO_BANNER = document.getElementById('text_banner');
 const BTN_HIRE = document.getElementById('btn_hire');
 const AVATAR_ABOUT = document.getElementById('avatar_about');
 const AVATAR_IMG = document.querySelector('#avatar_about img');
@@ -12,16 +11,12 @@ const BTN_NEXT_CARD = document.getElementById('btn-next');
 const BTN_PREV_CARD = document.getElementById('btn-prev');
 const SLIDES = document.querySelectorAll('#ul-slides li div');
 const INCADOR_DE_SLIDE = document.querySelectorAll('#slides-indicadores li');
-const NAVBAR_MOBILE = document.getElementById('navbar-mobile');
-const NAV_UL = document.getElementById('nav-ul');
-const HAMBURGUER_MENU = document.getElementById('hamburguer-menu');
-const BTN_CLOSE_NAVBAR = document.getElementById('close-mobile-menu');
   
 gsap.registerPlugin(CustomEase);
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
 
-let timeline = gsap.timeline();
+let timelineAbout = gsap.timeline();
 let timelineSkills = gsap.timeline({
   scrollTrigger: {
     trigger: DIV_SKILLS,
@@ -33,22 +28,19 @@ let timelineSkills = gsap.timeline({
     //options: play, pause, resume, reset, restart, complete, reverse, none 
   }});
 let timelineTitleCard = gsap.timeline();
-let timelineNavbar = gsap.timeline();
   
-CustomEase.create('efeitoVaiEvolta', 'M0,0 C0,0 0.193,1.499 0.464,1.77 0.689,1.995 1,1 1,1 ');
 CustomEase.create("customEffectClick", "M0,0 C0.126,0.382 0.12,0.868 0.504,0.54 0.704,0.369 0.818,1.001 1,1 ");
 CustomEase.create("efeitoSlide", "M0,0 C0,0 -0.012,0.461 0.286,0.472 0.549,0.48 0.663,0.353 0.77,0.428 1.001,0.589 1,1.016 1,1.016 ");
   
   function animate() {
-    timeline.set([TEXTO_BANNER, INFORMATIONS_ABOUT, AVATAR_ABOUT, BTN_HIRE, LINKS], { autoAlpha: 1 });
-    timeline.from(TEXTO_BANNER, { x: -300, duration: 1.2, ease: 'efeitoVaiEvolta' })
-    .from([AVATAR_ABOUT, INFORMATIONS_ABOUT], { opacity: 0 })
+    timelineAbout.set([INFORMATIONS_ABOUT, AVATAR_ABOUT, BTN_HIRE, LINKS], { autoAlpha: 1 });
+    timelineAbout.from([AVATAR_ABOUT, INFORMATIONS_ABOUT], { opacity: 0 })
     .from(BTN_HIRE, { y: 140, opacity: 0, duration: 1 })
     .from(LINKS, {opacity:0, duration:0.5, stagger:0.2});
   }
   
   function animateSkills(){
-    timeline.set(LEVEL_SKILLS,{autoAlpha:1});
+    timelineSkills.set(LEVEL_SKILLS,{autoAlpha:1});
     timelineSkills.fromTo(LEVEL_SKILLS[0], { width: 0 }, { width: NIVEIS[0], duration: 1, ease: 'linear' })
       .fromTo(LEVEL_SKILLS[1], { width: 0 }, { width: NIVEIS[1], duration: 1, ease: 'linear' })
       .fromTo(LEVEL_SKILLS[2], { width: 0 }, { width: NIVEIS[2], duration: 1, ease: 'linear' })
@@ -186,24 +178,13 @@ setInterval(function () {
 }, 5000);
 
 
-function abrirMenuMobile() {
-  timelineNavbar.set(NAVBAR_MOBILE, { autoAlpha: 1 });
-  timelineNavbar.fromTo(NAV_UL, { height: 0 }, { height: '77vh', duration: 0.5, ease:'power4.out(1, 0.3)' });
-}
 
-function fecharNavBarMobile() {
-  timelineNavbar.to(NAV_UL, { height: '0vh', duration: 0.5, ease: 'power4.out(1, 0.3)'});
-  timelineNavbar.set(NAVBAR_MOBILE, { autoAlpha: 0 },'-=0.4');
-}
 
 function animarAvatarAoPassarMouse() {
   gsap.to(AVATAR_IMG, { scale: 1.3, duration:1, ease:'back', yoyo:true, repeat:1});
 }
 
 AVATAR_IMG.addEventListener('mouseover', animarAvatarAoPassarMouse);
-
-BTN_CLOSE_NAVBAR.addEventListener('click', fecharNavBarMobile);
-HAMBURGUER_MENU.addEventListener('click',abrirMenuMobile); 
 
 
 BTN_NEXT_CARD.addEventListener('click', nextCardOnBtnClick);
