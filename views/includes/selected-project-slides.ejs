@@ -1,29 +1,19 @@
 <article class="cards" id="slides">
-
+  
   <div class="imagens-do-projeto">
-
-    <div class="fila-de-imagem">
-      <img src="/img/upload/nodp_1.jpg" alt="imagem" data-index="0">
-    </div>
-
-    <div class="fila-de-imagem">
-      <img src="/img/upload/nodp_2.jpg" alt="imagem" data-index="1">
-    </div>
-
+    
     <div class="image-selected">
       <button id="btn-anterior"><i class="fas fa-chevron-left"></i></button>
-      <img src="/img/upload/nodp_3.jpg" alt="imagem" data-index="2" id="slide-atual">
+      <img src="/img/upload/<%=project.images[0]%>" alt="imagem" data-index="0" id="slide-atual">
       <button id="btn-proximo"><i class="fas fa-chevron-right"></i></button>
     </div>
-
-    <div class="fila-de-imagem">
-      <img src="/img/upload/nodp_4.jpg" alt="imagem" data-index="3">
-    </div>
-
-    <div class="fila-de-imagem">
-      <img src="/img/upload/nodp_5.jpg" alt="imagem" data-index="4">
-    </div>
-
+    
+    <% for( let index = 1; index < project.images.length; index++ ) { %>
+      <div class="fila-de-imagem">
+        <img src="<%=project.images[index]%>" alt="imagem" data-index="<%=i%>">
+      </div>
+    <% } %>
+      
   </div>
-
+  
 </article>

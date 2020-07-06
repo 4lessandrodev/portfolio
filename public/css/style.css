@@ -168,7 +168,7 @@ scroll-behavior: smooth;
 	text-align: center;
 }
 #about .avatar{
-	color: var(--dark-color-one);
+	color: var(--grey-color);
 	font-size: 63px;
 }
 
@@ -178,13 +178,13 @@ scroll-behavior: smooth;
 
 #about .name{
 	font-size: 24px;
-	color: var(--dark-color-one);
+color: var(--grey-color);
 	margin: 2px 0 4px 0;
 }
 
 #about .graduacao {
 	font-size: 18px;
-	color: var(--dark-color-one);
+color: var(--grey-color);
 	margin: 2px 0 4px 0;
 }
 
@@ -743,11 +743,11 @@ abbr[title]{
 	}
 	
 	#about .name{
-		font-size: 45px;
+		font-size: 30px;
 	}
 	
 	#about .graduacao{
-		font-size: 28px;
+		font-size: 18px;
 	}
 	
 	.cards{
@@ -794,7 +794,7 @@ abbr[title]{
 	
 	#avatar_about img {
 		max-width: 140px;
-		border: 7px solid var(--dark-color-one);
+		border: 7px solid var(--grey-color);
 		cursor: pointer;
 	}
 	
@@ -851,6 +851,11 @@ abbr[title]{
 	
 	#contato form input[type=submit] {
 		height: 7vh
+	}
+
+	/* Sessão skills  */
+	#skills {
+		margin-top: 7%;
 	}
 	
 }
