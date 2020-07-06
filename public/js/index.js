@@ -62,7 +62,6 @@ CustomEase.create("efeitoSlide", "M0,0 C0,0 -0.012,0.461 0.286,0.472 0.549,0.48 
     .from(titulo, { text: 'PROJETO', duration: 1, delay: 0.5 });
   }
   
-  const screenSize = window.innerWidth;
   const CARDS = document.querySelectorAll('#session-cards .card');
   
   

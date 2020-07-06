@@ -3,6 +3,7 @@ const NAVBAR_MOBILE = document.getElementById('navbar-mobile');
 const NAV_UL = document.getElementById('nav-ul');
 const HAMBURGUER_MENU = document.getElementById('hamburguer-menu');
 const BTN_CLOSE_NAVBAR = document.getElementById('close-mobile-menu');
+const screenSize = window.innerWidth;
 
 gsap.registerPlugin(CustomEase);
 gsap.registerPlugin(ScrollTrigger);
@@ -32,3 +33,12 @@ HAMBURGUER_MENU.addEventListener('click',abrirMenuMobile);
 window.addEventListener('load', function () {
   animateHeader();
 }); 
+
+
+NAV_UL.addEventListener('click', function (event) {
+  let tag = event.target.tagName;
+  let paginaAtual = location.pathname;
+  if (tag == 'A' && screenSize < 800 && paginaAtual == '/') {
+    fecharNavBarMobile();
+  }
+});
