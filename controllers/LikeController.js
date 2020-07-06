@@ -6,9 +6,25 @@ const Project = mongoose.model('Project');
 module.exports = {
 
   store: async (req, res) => {
-    let project = await Project.updateOne({ id: req.param.id },
-      { $set: { qtdLikes: req.body.qtd } });
-    res.status(200).json({ project });
+
+    let qtd = 1;
+    if (req.params.id == '' || req.params.id == undefined || req.params.id == null) {
+      return res.status(401).json({ error: { msg:'Projeto sem um id ou quantidade de likes'}});
+    }
+    let projectFound = await Project.findById(req.params.id);
+
+    if (projectFound == null) {
+      return res.status(401).json({ error: { msg: 'Não foi encontrado o projeto para o id informado' }});
+    }
+
+    if (projectFound.qtdLikes != 0 || projectFound.qtdLikes != null || projectFound.qtdLikes != undefined) {
+      qtd += projectFound.qtdLikes;
+    }
+
+    let project = await Project.updateOne({ _id: req.params.id },
+      { $set: { qtdLikes: qtd } });
+    return res.status(200).json({ project });
+
   },
 
 };
