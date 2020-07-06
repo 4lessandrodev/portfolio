@@ -41,19 +41,19 @@ CustomEase.create("efeitoSlide", "M0,0 C0,0 -0.012,0.461 0.286,0.472 0.549,0.48 
   
   function animateSkills(){
     timelineSkills.set(LEVEL_SKILLS,{autoAlpha:1});
-    timelineSkills.fromTo(LEVEL_SKILLS[0], { width: 0 }, { width: NIVEIS[0], duration: 1, ease: 'linear' })
-      .fromTo(LEVEL_SKILLS[1], { width: 0 }, { width: NIVEIS[1], duration: 1, ease: 'linear' })
-      .fromTo(LEVEL_SKILLS[2], { width: 0 }, { width: NIVEIS[2], duration: 1, ease: 'linear' })
-      .fromTo(LEVEL_SKILLS[3], { width: 0 }, { width: NIVEIS[3], duration: 1, ease: 'linear' })
-      .fromTo(LEVEL_SKILLS[4], { width: 0 }, { width: NIVEIS[4], duration: 1, ease: 'linear' })
-      .fromTo(LEVEL_SKILLS[5], { width: 0 }, { width: NIVEIS[5], duration: 1, ease: 'linear' })
-      .fromTo(LEVEL_SKILLS[6], { width: 0 }, { width: NIVEIS[6], duration: 1, ease: 'linear' })
-      .fromTo(LEVEL_SKILLS[7], { width: 0 }, { width: NIVEIS[7], duration: 1, ease: 'linear' })
-      .fromTo(LEVEL_SKILLS[8], { width: 0 }, { width: NIVEIS[8], duration: 1, ease: 'linear' })
-      .fromTo(LEVEL_SKILLS[9], { width: 0 }, { width: NIVEIS[9], duration: 1, ease: 'linear' })
-      .fromTo(LEVEL_SKILLS[10], { width: 0 }, { width: NIVEIS[10], duration: 1, ease: 'linear' })
-      .fromTo(LEVEL_SKILLS[11], { width: 0 }, { width: NIVEIS[11], duration: 1, ease: 'linear' })
-      .fromTo(LEVEL_SKILLS[12], { width: 0 }, { width: NIVEIS[12], duration: 1, ease: 'linear' });
+    timelineSkills.fromTo(LEVEL_SKILLS[0], { width: 0 }, { width: NIVEIS[0], duration: 0.5, ease: 'linear' })
+      .fromTo(LEVEL_SKILLS[1], { width: 0 }, { width: NIVEIS[1], duration: 0.5, ease: 'linear' })
+      .fromTo(LEVEL_SKILLS[2], { width: 0 }, { width: NIVEIS[2], duration: 0.5, ease: 'linear' })
+      .fromTo(LEVEL_SKILLS[3], { width: 0 }, { width: NIVEIS[3], duration: 0.5, ease: 'linear' })
+      .fromTo(LEVEL_SKILLS[4], { width: 0 }, { width: NIVEIS[4], duration: 0.5, ease: 'linear' })
+      .fromTo(LEVEL_SKILLS[5], { width: 0 }, { width: NIVEIS[5], duration: 0.5, ease: 'linear' })
+      .fromTo(LEVEL_SKILLS[6], { width: 0 }, { width: NIVEIS[6], duration: 0.5, ease: 'linear' })
+      .fromTo(LEVEL_SKILLS[7], { width: 0 }, { width: NIVEIS[7], duration: 0.5, ease: 'linear' })
+      .fromTo(LEVEL_SKILLS[8], { width: 0 }, { width: NIVEIS[8], duration: 0.5, ease: 'linear' })
+      .fromTo(LEVEL_SKILLS[9], { width: 0 }, { width: NIVEIS[9], duration: 0.5, ease: 'linear' })
+      .fromTo(LEVEL_SKILLS[10], { width: 0 }, { width: NIVEIS[10], duration: 0.5, ease: 'linear' })
+      .fromTo(LEVEL_SKILLS[11], { width: 0 }, { width: NIVEIS[11], duration: 0.5, ease: 'linear' })
+      .fromTo(LEVEL_SKILLS[12], { width: 0 }, { width: NIVEIS[12], duration: 0.5, ease: 'linear' });
   }
   
   function animateTitleCard(card) {

@@ -1,148 +1,35 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<%- include('includes/head') %>
 
-  <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Portfólio de projetos desenvolvidos em minha jornada como desenvolvedor, 
-  Alguns artigos interessantes e dicas de desenvolvimento">
-    <meta name="keywords" content="Fullstack, Dev, Desenvolvedor, desenvolvedor, dev, fullstack, nodejs, 
-  express, sequelize, Alessandrodev, alessandrodev, alessandro dev, Alessandro Dev">
-    <meta name="author" content="Alessandro Lima de Menezes">
-    <title><%= title %></title>
-    <link rel="shortcut icon" href="/img/default-site/icon-dark.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700;900&display=swap"
-      rel="stylesheet">
-    <script src="https://kit.fontawesome.com/8701d44bdc.js" crossorigin="anonymous"></script>
-    <script src="/js/gsap.min.js"></script>
-    <script src="/js/CustomEase.min.js"></script>
-    <script src="/js/ScrollTrigger.min.js"></script>
-    <script src="/js/TextPlugin.min.js"></script>
-    <link rel='stylesheet' href='/css/normalize.css' />
-    <link rel='stylesheet' href='/css/style.css' />
-  </head>
+<body id="page-project">
+  <header id="header">
 
-  <body id="page-project">
-    <header id="header">
-      <div id="nav">
-        <div id="div-logo">
-          <img src="/img/default-site/logowhite.png" alt="" id="logo">
-        </div>
-        <div id="hamburguer-menu">
-          <span><i class="fas fa-grip-vertical"></i></span>
-        </div>
-      </div>
-      <nav id="navbar-mobile">
-        <div id="close-mobile-menu">
-          <i class="fas fa-times"></i>
-        </div>
-        <ul class="nav-ul" id="nav-ul">
-          <li>About</li>
-          <li>Skills</li>
-          <li>Projetos</li>
-          <li>Contato</li>
-          <li>Blog</li>
-        </ul>
-      </nav>
-      <div id="header-banner">
-        <h2 id="text_banner">Nodp - Rede Social</h2>
-      </div>
-    </header>
-    <main id="home">
+    <%- include('includes/bar')  %>
 
-      <section id="about">
+    <%- include('includes/navbar')  %>
+    
+    <%- include('includes/selected-project-banner')  %>
 
+  </header>
+  <main id="home">    
+    
+    <section id="projetos">
+      
+      <%- include('includes/selected-project-introduction') %> 
 
+      <%- include('includes/selected-project-slides') %> 
+      
+      <%- include('includes/selected-project-video') %> 
+      
+      <%- include('includes/selected-project-tecnologias') %> 
+      
+    </section>
+    
+  </main>
+    
+    <%- include('includes/footer') %>
 
-      </section>
-
-     
-
-      <section id="projetos">
-
-        <article class="introduction">
-
-          <div>
-            <h2>Sobre o projeto</h2>
-            <h3>Resumo</h3>
-          </div>
-          <div class="image-and-text">
-            <div class="div-image">
-              <img src="/img/default-site/my_apps.png" alt="image">
-            </div>
-
-            <div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, quos! Vitae qui libero ea enim
-                temporibus
-                voluptas labore, ducimus, molestiae doloribus provident ab doloremque corporis fugit odio. Voluptatibus,
-                dignissimos? Necessitatibus.
-              </p>
-            </div>
-          </div>
-        </article>
-
-        <article class="cards" id="slides">
-
-          <div class="imagens-do-projeto">
-            <div class="fila-de-imagem">
-              <img src="/img/upload/nodp_1.jpg" alt="imagem" data-index="0">
-            </div>
-           <div class="fila-de-imagem">
-              <img src="/img/upload/nodp_2.jpg" alt="imagem" data-index="1">
-            </div>
-
-            <div class="image-selected">
-               <button id="btn-anterior"><i class="fas fa-chevron-left"></i></button>
-              <img src="/img/upload/nodp_3.jpg" alt="imagem" data-index="2" id="slide-atual">
-              <button id="btn-proximo"><i class="fas fa-chevron-right"></i></button>
-            </div>
-
-           <div class="fila-de-imagem">
-              <img src="/img/upload/nodp_4.jpg" alt="imagem" data-index="3">
-            </div>
-            <div class="fila-de-imagem">
-              <img src="/img/upload/nodp_5.jpg" alt="imagem" data-index="4">
-            </div>
-          </div>
-        </article>
-
-        <article id="tecnologias">
-          <div class="tecnologias">
-            <div class="tecnologia-icon node" title="nodeJS">
-              <i class="fab fa-node"></i>
-            </div>
-            <div class="tecnologia-icon" title="HTML5">
-              <i class="fab fa-html5 html"></i>
-            </div>
-            <div class="tecnologia-icon" title="CSS">
-             <i class="fab fa-css3 css"></i>
-            </div>
-            <div class="tecnologia-icon javascrip" title="javaScrip">
-             <i class="fab fa-js-square"></i>
-            </div>
-            <div class="tecnologia-icon mysql" title="mySQL">
-             <i class="fas fa-database"></i>
-            </div>
-          </div>
-
-        </article>
-
-      </section>
-
-    </main>
-    <footer id="footer">
-      <div>
-        <a href="mailto:alessandroadm@live.com"><span class="icon"><i class="fas fa-envelope"></i></span></a>
-        <a href="https://github.com/ALESSANDROLMENEZES"><span class="icon"><i class="fab fa-github"></i></span></a>
-        <a href="https://www.linkedin.com/in/alessandro-l-menezes-57906b71/"><span class="icon"><i
-              class="fab fa-linkedin"></i></span></a>
-      </div>
-      <div>
-        <address> Created by Alessandro <span><i class="fas fa-registered"></i></span></address>
-      </div>
-    </footer>
-      <script src="/js/header.js"></script>
-      <script src="/js/slideProject.js"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/slideProject.js"></script>
   </body>
-
-</html>
+  
+  </html>

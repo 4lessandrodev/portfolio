@@ -1,3 +1,30 @@
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<%- include('includes/head') %>
+
+<body>
+  <header id="header">
+    
+    <%- include('includes/bar')  %>
+    
+    <%- include('includes/navbar')  %>
+    
+    <div style="height: 0vh; padding: 7%;"></div>
+    
+  </header>
+  <main id="error" style="text-align: center; overflow: hidden;">
+    
+    <h1 style="font-size: 5rem; color: blueviolet;">Você se perdeu?</h1>
+    
+    <div style="font-size: 7rem; color: burlywood; margin-bottom: 7vh; display: block;" id="ghost">
+      <i class="fas fa-ghost"></i>
+    </div>
+  </main>
+  
+  <%- include('includes/footer') %>
+  
+  <script src="/js/header.js"></script>
+  <script>
+    gsap.to('#ghost', {repeat:7, yoyo:true, scale:2, duration:0.5, rotation:7, ease:'back'})
+  </script>
+</body>
+
+</html>

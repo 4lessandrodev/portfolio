@@ -11,6 +11,9 @@
 	--light-divider-color: #DEDEDE; 
 	--family-default: 'Raleway'
 }
+html {
+	scroll-behavior: smooth;
+}
 
 body {
 	font: 14px var(--family-default),
@@ -82,7 +85,16 @@ p{
 	max-width: 50%;
 }
 
+#nav-ul li a{
+text-decoration: none;
+color: var(--white-color);
+scroll-behavior: smooth;
+}
+
 #nav-ul li:hover{
+	color: var(--accent-color);
+}
+#nav-ul li a:hover{
 	color: var(--accent-color);
 }
 
@@ -190,6 +202,9 @@ p{
 #btn_hire{
 	visibility: hidden;
 }
+#btn_hire:hover{
+	cursor: pointer;
+}
 
 #about .about-btn a{
 	font-size: 28px;
@@ -227,6 +242,11 @@ p{
 
 #skills h2{
 	font-size: 28px;
+}
+
+#skills .row {
+	display: flex;
+	flex-direction: column;
 }
 
 
@@ -310,7 +330,7 @@ p{
 	border-radius: 14px;
 	border: 3px solid var(--white-color);
 	box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.42);
-	max-width: 80%;
+	max-width: 77%;
 }
 
 #page-project .imagens-do-projeto .image-selected{
@@ -340,23 +360,23 @@ p{
 }
 
 #page-project .tecnologias .javascrip {
-color: rgb(211, 211, 65);
+	color: rgb(211, 211, 65);
 }
 
 #page-project .tecnologias .node {
-color: darkgreen;
+	color: darkgreen;
 }
 
 #page-project .tecnologias .html {
-color: darkorange;
+	color: darkorange;
 }
 
 #page-project .tecnologias .css {
-color: blue;
+	color: blue;
 }
 
 #page-project .tecnologias .mysql {
-color: darkorange;
+	color: darkorange;
 }
 
 #page-project .imagens-do-projeto .image-selected img:hover{
@@ -455,7 +475,7 @@ color: darkorange;
 	
 	justify-content: center;
 	align-items: center;
-	padding: 14%;
+	padding: 22%;
 	
 }
 
@@ -577,6 +597,67 @@ img{
 	max-width: 100%;
 }
 
+#video-projeto h2{
+	font-size: 28px;
+	color: var(--dark-color-one);
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+#video-projeto h3{
+	font-size: 22px;
+	color: var(--grey-color);
+	margin-top: 0;
+	padding-top: 0;
+}
+
+#video-projeto {
+	width: 80%;
+	margin: auto;
+}
+
+#video {
+	padding-top: calc(100%/ (560 / 315));
+	position: relative;
+	height: 0;
+}
+
+#video iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+abbr[title]{
+	text-decoration:none;
+	cursor: pointer;
+}
+
+
+
+
+@media only screen and (orientation: landscape) {
+#nav {
+	height: 22%;
+}
+
+#contato form input[type=submit]{
+	height:14vh
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media only screen and (min-width: 900px) {
@@ -675,6 +756,16 @@ img{
 		min-width: 100%;
 	}
 	
+	#skills .row {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	
+	#skills .row .container-skill {
+		min-width: 30vw;
+	}
+	
 	#projetos .introduction .image-and-text {
 		display: flex;
 		flex-direction: row;
@@ -726,16 +817,40 @@ img{
 		width: 100%;
 		
 	}
-
+	
 	#page-project .tecnologias {
 		width: 80vw;
 		margin: 5% 0; 
 		overflow: hidden;
 	}
-
+	
 	#page-project .tecnologias .tecnologia-icon {
 		display: block;
 		font-size: 5rem;
+	}
+	
+	#video-projeto h2 {
+		font-size: 28px;
+		color: var(--dark-color-one);
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+	
+	#video-projeto h3 {
+		font-size: 22px;
+		color: var(--grey-color);
+		margin-top: 0;
+		padding-top: 0;
+	}
+	
+	#video-projeto {
+		width: 75%;
+		margin: auto;
+		margin-bottom: 5%;
+	}
+	
+	#contato form input[type=submit] {
+		height: 7vh
 	}
 	
 }
