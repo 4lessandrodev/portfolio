@@ -6,6 +6,7 @@ var logger = require('morgan');
 const cors = require('cors');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const mongoose = require('mongoose');
 
 var app = express();
 
@@ -16,9 +17,14 @@ app.set('view engine', 'ejs');
 app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+mongoose.connect('mongodb://localhost:27017/nodeapi', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
