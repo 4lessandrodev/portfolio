@@ -18,15 +18,15 @@
       <i class="fas fa-ghost"></i>
     </div>
 
-    <h1><%= message %></h1>
+
     <h2><%= error.status %></h2>
-    <pre><%= error.stack %></pre>
+
     
   </main>
   
   <%- include('includes/footer') %>
   
-  <script src="/js/header.js"></script>
+  <script src="/portfolio/js/header.js"></script>
   <script>
     gsap.to('#ghost', {repeat:7, yoyo:true, scale:2, duration:0.5, rotation:7, ease:'back'})
   </script>

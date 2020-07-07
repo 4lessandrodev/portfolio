@@ -8,6 +8,8 @@ const { check, body, validationResult } = require('express-validator');
 /* GET home page. */
 router.get('/', projectController.index);
 
+router.get('/index', projectController.index);
+
 router.get('/projects/:_id', projectController.show);
 
 router.get('/api/projects/:_id', projectController.view);
