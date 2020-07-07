@@ -35,6 +35,10 @@ function validateInputs() {
   
   function clearInputs() {
     FORM_MESSAGE.reset();
+    NAME_ERROR.textContent = '';
+    SUBJECT_ERROR.textContent = '';
+    MESSAGE_ERROR.textContent = '';
+    EMAIL_ERROR.textContent = '';
   }
   
   

@@ -23,10 +23,10 @@
 
     
   </main>
-  
-  <%- include('includes/footer') %>
-  
-  <script src="/portfolio/js/header.js"></script>
+  <div style="position: fixed; bottom: 0; width: 100vw;">
+    <%- include('includes/footer') %>
+  </div>
+  <script src="/js/header.js"></script>
   <script>
     gsap.to('#ghost', {repeat:7, yoyo:true, scale:2, duration:0.5, rotation:7, ease:'back'})
   </script>

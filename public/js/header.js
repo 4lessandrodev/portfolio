@@ -38,7 +38,7 @@ window.addEventListener('load', function () {
 NAV_UL.addEventListener('click', function (event) {
   let tag = event.target.tagName;
   let paginaAtual = location.pathname;
-  if (tag == 'A' && screenSize < 800 && paginaAtual == '/') {
+  if (tag == 'A' && screenSize < 800 && paginaAtual == '/portfolio') {
     fecharNavBarMobile();
   }
 });
