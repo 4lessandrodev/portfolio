@@ -9,8 +9,13 @@ module.exports = {
   index: async (req, res) => {
     let projects = await Project.find();
     //return res.status(200).json({ projects });
-    Project.db.close();
     res.render('index', { projects, title: 'Portfólio' });
+  },
+  
+
+  list: async (req, res) => {
+    let projects = await Project.find();
+    return res.status(200).json({ projects });
   },
   
   

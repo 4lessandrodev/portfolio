@@ -6,27 +6,31 @@
     <p>Eu gostaria muito de saber como posso melhorar meu trabalho, sou uma pessoa aberta a novas ideias</p>
   </div>
   <div>
-    <form action="#">
+    <form action="#" id="message-form">
 
       <div class="input-group">
         <label for="name">Nome</label>
         <input type="text" name="name" id="name" required placeholder="Nome">
+        <span id="name-erro"></span>
       </div>
 
       <div class="input-group">
         <label for="subject">Assunto</label>
         <input type="text" name="subject" id="subject" required placeholder="Assunto">
+        <span id="subject-erro"></span>
       </div>
 
       <div class="input-group">
         <label for="email">E-mail</label>
         <input type="text" name="email" id="email" required placeholder="Email">
+        <span id="email-erro"></span>
       </div>
 
       <div class="input-group">
         <textarea name="message" id="message" cols="30" rows="5" required placeholder="Mensagem"></textarea>
+        <span id="message-erro"></span>
       </div>
-      <input type="submit" value="Enviar">
+      <input type="submit" value="Enviar" id="btn-send-message">
     </form>
   </div>
 </section>

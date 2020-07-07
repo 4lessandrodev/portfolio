@@ -4,7 +4,7 @@ let Element;
 async function likeProject() {
   
   let promise = await fetch(`${location.origin}/api/likes/${Element.dataset.id}`, {
-    body: JSON.stringify({}),
+    body: JSON.stringify({'like':'Ok'}),
     headers: { "Content-Type": "application/json" },
     method: 'PATCH'
   });

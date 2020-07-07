@@ -634,6 +634,10 @@ abbr[title]{
 	cursor: pointer;
 }
 
+.input-group span{
+	color: rgb(230, 187, 138);
+	font-size: 12px;
+}
 
 
 

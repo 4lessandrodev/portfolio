@@ -12,6 +12,8 @@ router.get('/projects/:_id', projectController.show);
 
 router.get('/api/projects/:_id', projectController.view);
 
+router.get('/api/projects', projectController.list);
+
 router.post('/api/projects', [
   check('title', 'Título do projeto').isLength({min:3}),
   check('description', 'Informe um breve resumo do projeto').isLength({min:50}),
@@ -28,7 +30,7 @@ router.put('/api/projects/:_id', [
 
 router.patch('/api/likes/:_id', likeController.store);
 
-router.post('/api/messages  ', [
+router.post('/api/messages', [
   check('email','Informe um email válido').isEmail(),
   check('name', 'Informe o seu nome').isLength({ min: 3 }),
   check('message', 'Mensagem deve ter no mínomo 10 caracteres').isLength({ min: 10 }),
