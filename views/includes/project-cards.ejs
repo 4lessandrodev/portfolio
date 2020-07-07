@@ -1,56 +1,50 @@
 <article class="cards" id="session-cards">
-
+  
   <div class="icon-left next" id="btn-prev">
     <span><i class="fas fa-chevron-left"></i></span>
   </div>
-
-    <div class="card active" draggable="true" data-index="0">
-      <div class="card-header">
-        <h4><%= projects[0].title %> </h4>
-        <!-- <h4>Rede social - <abbr lang="Eng" title="No Dependence">NODP</abbr></h4> -->
-      </div>
-      <div class="card-body">
-        <%= projects[0].description %>
-        <!-- <p>Este projeto foi desenvolvido para ser apresentado na conclusão do curso
-        <strong>fullstack</strong> Santander Coders by <strong>Digital House</strong></p> -->
-      </div>
-      <div class="card-footer">
-        <div class="btn-like">
-          <span><i class="fas fa-heart"></i> <%=projects[0].qtdLikes%> </span>
-        </div>
-        <div>
-          <a href="/projects/<%=projects[0]._id%> ">Detalhes</a>
-        </div>
-      </div>
-    </div>
-
-  <% for( let i = 1; i < projects.length; i++ ) { %>
   
-  <div class="card hidden" draggable="true" data-index="<%=i%>">
+  <div class="card active" draggable="true" data-index="0">
     <div class="card-header">
-      <h4><%= projects[i].title %> </h4>
-      <!-- <h4>Rede social - <abbr lang="Eng" title="No Dependence">NODP</abbr></h4> -->
+      <h4><%= projects[0].title %> </h4>
     </div>
     <div class="card-body">
-      <%= projects[i].description %>
-      <!-- <p>Este projeto foi desenvolvido para ser apresentado na conclusão do curso
-        <strong>fullstack</strong> Santander Coders by <strong>Digital House</strong></p> -->
+      <%= projects[0].description %>
     </div>
     <div class="card-footer">
-      <div class="btn-like">
-        <span><i class="fas fa-heart"></i> <%=projects[i].qtdLikes%> </span>
+     <div class="btn-like" data-id="<%=projects[0]._id%>">
+        <span><i class="fas fa-heart"></i> <%=projects[0].qtdLikes%> </span>
       </div>
       <div>
-        <a href="/projects/<%=projects[i]._id%> ">Detalhes</a>
+        <a href="/projects/<%=projects[0]._id%> ">Detalhes</a>
       </div>
     </div>
   </div>
-
-  <% } %>
-
-
-  <div class="icon-right next" id="btn-next">
-    <span><i class="fas fa-chevron-right"></i></span>
-  </div>
-
-</article>
+  
+  <% for( let i = 1; i < projects.length; i++ ) { %>
+    
+    <div class="card hidden" draggable="true" data-index="<%=i%>">
+      <div class="card-header">
+        <h4><%= projects[i].title %> </h4>
+      </div>
+      <div class="card-body">
+        <%= projects[i].description %>
+      </div>
+      <div class="card-footer">
+        <div class="btn-like" data-id="<%=projects[i]._id%>">
+          <span><i class="fas fa-heart quantidade-de-like"></i><%=projects[i].qtdLikes%></span>
+        </div>
+        <div>
+          <a href="/projects/<%=projects[i]._id%> ">Detalhes</a>
+        </div>
+      </div>
+    </div>
+    
+    <% } %>
+    
+    
+    <div class="icon-right next" id="btn-next">
+      <span><i class="fas fa-chevron-right"></i></span>
+    </div>
+    
+  </article>

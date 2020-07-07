@@ -8,9 +8,9 @@
       <button id="btn-proximo"><i class="fas fa-chevron-right"></i></button>
     </div>
     
-    <% for( let index = 1; index < project.images.length; index++ ) { %>
+    <% for( var i = 1; i < project.images.length; i++ ) { %>
       <div class="fila-de-imagem">
-        <img src="<%=project.images[index]%>" alt="imagem" data-index="<%=i%>">
+        <img src="/img/upload/<%=project.images[i]%>" alt="imagem" data-index="<%=i%>">
       </div>
     <% } %>
       

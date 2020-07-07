@@ -8,7 +8,9 @@ module.exports = {
   
   index: async (req, res) => {
     let projects = await Project.find();
-    return res.status(200).json({ projects });
+    //return res.status(200).json({ projects });
+    Project.db.close();
+    res.render('index', { projects, title: 'Portfólio' });
   },
   
   
@@ -18,6 +20,7 @@ module.exports = {
     try {
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
+
         return res.status(422).json({ errors: errors.array() });
       }
       
@@ -32,16 +35,19 @@ module.exports = {
       });
       
       if (possuiEspacosNoNome.indexOf('true') != '-1') {
+   
         return res.status(422).json({ error: { msg: 'Informe o nome das imagens sem espaços' } });
       } else {
         
         req.body.images = images;
         
         let project = await Project.create(req.body);
+      
         return res.status(200).json({ project });
         
       } 
     } catch (error) {
+
       res.status(500);
     }
   },
@@ -53,6 +59,7 @@ module.exports = {
     try {
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
+    
         return res.status(422).json({ errors: errors.array() });
       }
 
@@ -67,28 +74,45 @@ module.exports = {
       });
 
       if (possuiEspacosNoNome.indexOf('true') != '-1') {
+     
         return res.status(422).json({ error: { msg: 'Informe o nome das imagens sem espaços' } });
       } else {
 
         let projectFound = await Project.findById(req.params._id);
 
         if (projectFound == null) {
+  
           return res.status(401).json({ error: { msg: 'Não foi encontrado o projeto para o id informado' } });
         }
 
         let project = await Project.updateOne(req.params, req.body);
+ 
         return res.status(200).json({ project });
       } 
     } catch (error) {
+
       res.status(500);
     }
   },
   
   show: async (req, res) => {
     try {
-      let project = await Project.findById(req.params_id);
+      let project = await Project.findById(req.params._id);
+      //return res.status(200).json({ project });
+      res.render('project', { project });
+    } catch (error) {
+  
+      res.status(500);
+    }
+  },
+
+  view: async (req, res) => {
+    try {
+      let project = await Project.findById(req.params._id);
+
       return res.status(200).json({ project });
     } catch (error) {
+
       res.status(500);
     }
   }

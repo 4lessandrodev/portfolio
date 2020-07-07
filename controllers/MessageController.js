@@ -10,12 +10,15 @@ module.exports = {
     try {
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
+   
         return res.status(422).json({ errors: errors.array() });
       }
       
       let message = await Message.create(req.body);
+
       res.status(200).json({ message }); 
     } catch (error) {
+
       res.status(500);
     }
   }
