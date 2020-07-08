@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var mongoose = require('mongoose');
 //Set up default mongoose connection
 var mongoDB = 'mongodb://localhost:27017/nodeapi';
+
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
  //Get the default connection
 var db = mongoose.connection;
