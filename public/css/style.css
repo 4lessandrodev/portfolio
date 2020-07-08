@@ -86,9 +86,9 @@ p{
 }
 
 #nav-ul li a{
-text-decoration: none;
-color: var(--white-color);
-scroll-behavior: smooth;
+	text-decoration: none;
+	color: var(--white-color);
+	scroll-behavior: smooth;
 }
 
 #nav-ul li:hover{
@@ -178,13 +178,13 @@ scroll-behavior: smooth;
 
 #about .name{
 	font-size: 24px;
-color: var(--grey-color);
+	color: var(--grey-color);
 	margin: 2px 0 4px 0;
 }
 
 #about .graduacao {
 	font-size: 18px;
-color: var(--grey-color);
+	color: var(--grey-color);
 	margin: 2px 0 4px 0;
 }
 
@@ -453,7 +453,8 @@ color: var(--grey-color);
 }
 
 .card .card-body{
-	padding: 3% 5% 5% 5%;
+	padding: 7% 5% 5% 5%;
+	height: 200px;
 }
 
 .card .card-footer{
@@ -569,6 +570,7 @@ color: var(--grey-color);
 	font-size: 22px;
 	color: var(--dark-color-one);
 	border: none;
+	padding: 1vh;
 }
 
 /* Footer */
@@ -639,16 +641,20 @@ abbr[title]{
 	font-size: 12px;
 }
 
+#message{
+	resize: none;
+}
+
 
 
 @media only screen and (orientation: landscape) {
-#nav {
-	height: 22%;
-}
-
-#contato form input[type=submit]{
-	height:14vh
-}
+	#nav {
+		height: 22%;
+	}
+	
+	#contato form input[type=submit]{
+		height:14vh
+	}
 }
 
 
@@ -738,12 +744,14 @@ abbr[title]{
 	}
 	
 	.about-btn .btn button{
-		min-width: 42%;
-		width: 42%;
+		min-width: 33%;
+		width: 33%;
+		max-width: 300px;
 		font-size: 21px;
 		font-weight: 700;
 		letter-spacing: 2px;
-		
+		padding: 3% 5%;
+		margin: 3% 0;
 	}
 	
 	#about .name{
@@ -758,6 +766,19 @@ abbr[title]{
 		width: 100%;
 		max-width: 100%;
 		min-width: 100%;
+	}
+
+	.card {
+		box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.42);
+		border-radius: 14px;
+		background-color: var(--white-color);
+		max-width: 500px;
+		max-height: 500px;
+	}
+
+	.card .card-body {
+		padding: 7% 5% 5% 5%;
+		height: 150px;
 	}
 	
 	#skills .row {
@@ -856,11 +877,29 @@ abbr[title]{
 	#contato form input[type=submit] {
 		height: 7vh
 	}
-
+	
 	/* Sessão skills  */
 	#skills {
 		margin-top: 7%;
 	}
 	
+}
+
+
+
+
+
+
+
+@media only screen and (min-width: 1900px) {
+	.about-btn .btn button {
+		min-width: 19%;
+		width: 19%;
+		font-size: 21px;
+		font-weight: 700;
+		letter-spacing: 2px;
+		padding: 2% 3%;
+		margin: 2% 0;
+	}
 }
 
